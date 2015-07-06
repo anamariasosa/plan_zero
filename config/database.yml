@@ -23,5 +23,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: plan_zero
   pool: 5
+  database: plan_zero_production
+  username: plan_zero
+  password: <%= ENV['XMYAPP_DATABASE_PASSWORD'] %>
