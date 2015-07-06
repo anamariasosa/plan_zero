@@ -1,0 +1,37 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.app__container {
+  background-color: #4adbd0;
+  padding-top: 10px;
+  padding-left : 21px;
+  height: 100vh;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.logo {
+  margin: -5px;
+  padding: 0 10px;
+}
+
+.main-header__navbar, .main-header__button {
+  background-color: transparent;
+  border-color: transparent !important;
+}
+
+.main-header__button span {
+  background-color: #fff !important;
+}
+
+.app__start_btn {
+  background-color: #fff;
+  border-color: #fff;
+  color: #4adbd0;
+}
+
