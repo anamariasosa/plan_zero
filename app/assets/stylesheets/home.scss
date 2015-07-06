@@ -3,35 +3,47 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
-.app__container {
-  background-color: #4adbd0;
-  padding-top: 10px;
-  padding-left : 21px;
-  height: 100vh;
-}
+.app {
+  &__container {
+    background-color: #00d7ff;
+    padding-top: 10px;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+  }
 
-.logo img {
-  height: 60px;
-}
+  &__content {
+    margin-bottom: 20px;
 
-.logo {
-  margin: -5px;
-  padding: 0 10px;
-}
+    p {
+      margin: 30px 0;
+    }
 
-.main-header__navbar, .main-header__button {
-  background-color: transparent;
-  border-color: transparent !important;
-}
+  }
 
-.main-header__button span {
-  background-color: #fff !important;
-}
+  &__deck{
+    font-family: 'Droid Serif';
+    font-style: italic;
+    font-size: 22px;
+  }
 
-.app__start_btn {
-  background-color: #fff;
-  border-color: #fff;
-  color: #4adbd0;
+  &__headline{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+  }
+  &__start_btn, &__start_btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #00d7ff;
+  }
+
+  &__video, &__video:focus, &__video:hover {
+    color : #fff !important;
+    background-color: transparent;
+    text-transform: none !important;
+    font-size: 16px;
+  }
 }
 

@@ -8,11 +8,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <div class="container-fluid">
-    <%= yield %>
-  </div>
-
-
+  <header>
+    <nav class="navbar navbar-default navbar-static-top main-header__navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed main-header__button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar main-header__icon"></span>
+            <span class="icon-bar main-header__icon"></span>
+            <span class="icon-bar main-header__icon"></span>
+          </button>
+          <a class="navbar-brand logo" href=""><img src="/assets/logo.svg" alt="logo plan zero"></a>
+        </div>
+        <div id="navbar" class="main-header__navbar navbar-collapse collapse ">
+          <ul class="nav navbar-nav ">
+            <li class="active">
+              <%= link_to'Inicio', root_path %>
+            </li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#about">Síguenos </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <%= yield  %>
 </body>
 </html>

@@ -13,7 +13,26 @@
  *= require_tree .
  *= require_self
  */
-.container-fluid{
-  margin: 0;
-  padding: 0;
+ @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
+ body{
+  font-family: 'Droid Serif', serif;
+ }
+
+.logo img {
+  height: 60px;
+}
+
+.logo {
+  margin: -5px;
+  padding: 0 10px;
+}
+
+.main-header__icon {
+  background-color: #fff !important;
+}
+
+.main-header__navbar, .main-header__button {
+  background-color: #00d7ff;
+  margin-bottom: 0;
+  border-color: #00d7ff !important;
 }
