@@ -31,8 +31,8 @@
   background-color: #fff !important;
 }
 
-.main-header__navbar, .main-header__button {
-  background-color: #00d7ff;
+.main-header__navbar, .main-header__button, .main-header__button:hover {
+  background-color: #00d7ff !important;
   margin-bottom: 0;
   border-color: #00d7ff !important;
 }

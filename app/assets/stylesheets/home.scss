@@ -18,7 +18,7 @@
     margin-bottom: 20px;
 
     p {
-      margin: 30px 0;
+      margin: 20px 0;
     }
 
   }
@@ -33,13 +33,13 @@
     font-family: 'Lobster', cursive;
     font-size: 50px;
   }
-  &__start_btn, &__start_btn:hover {
+  &__start_btn, &__start_btn:hover, &__start_btn:visited {
     background-color: #fff;
     border-color: #fff;
     color: #00d7ff;
   }
 
-  &__video, &__video:focus, &__video:hover {
+  &__video, &__video:focus, &__video:hover, &__video:visited {
     color : #fff !important;
     background-color: transparent;
     text-transform: none !important;

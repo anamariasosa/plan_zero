@@ -7,6 +7,7 @@ class CreateDebts < ActiveRecord::Migration
       t.integer :user_id
       t.integer :remaining_fees
       t.string :frequency
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
