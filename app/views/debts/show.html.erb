@@ -1,8 +1,8 @@
 <div class="container debts__container debts__saved">
   <p>
-    Tu deuda <%= @debt.debt_name %> ha sido guardada con éxito
+    Tu deuda "<%= @debt.debt_name %>" ha sido guardada con éxito
   </p>
 
-  <%= link_to 'Editar', edit_debt_path(@debt), class: "btn debts__button"%> <br>
-  <%= link_to 'Ver lista de deudas', debts_path, class: "btn debts__button" %>
+  <%= link_to 'Editar', edit_debt_path(@debt), class: "btn btn-lg debts__button"%> <br>
+  <%= link_to 'Ver mi lista de deudas', debts_path, class: "btn btn-lg debts__button" %>
 </div>

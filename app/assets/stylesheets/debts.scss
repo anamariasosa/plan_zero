@@ -7,16 +7,12 @@
     margin-top: 0 !important;
   }
 
-  &__button {
-    padding-top: 10px !important;
-  }
-
   &__fields th {
     text-align: center;
     font-size: 20px;
     color: #fff;
-    background-color: #00ff00;
-    border-color: #13db13 !important;
+    background-color: #00adee;
+    border-color: #0ca1da !important;
   }
 
   &__details {
@@ -39,7 +35,7 @@
   }
 
   &__new {
-    margin-top: 20px;
+    margin: 20px 0;
     text-align: left;
   }
 
@@ -51,7 +47,7 @@
   }
 
   &__saved {
-    padding: 50% 0 !important;
+    padding-top: 40% !important;
   }
 }
 .footable-row-detail{
