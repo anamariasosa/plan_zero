@@ -1,0 +1,8 @@
+<div class="container welcome__container">
+  <h3 class="welcome__title"><%= current_user.username %>, empecemos...</h3>
+  <h6 class="welcome__deck">Ahora estás registrado en plan zero hagamos rendir tu dinero actualizando las deudas para saber cómo seguir.</h6>
+  <div class="welcome__debts">
+    <%= link_to'Registrar deudas', new_debt_path, class: "btn btn-primary btn-lg app__start_btn"  %>
+  </div>
+
+</div>

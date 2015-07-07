@@ -22,14 +22,13 @@
         </div>
         <div id="navbar" class="main-header__navbar navbar-collapse collapse ">
           <ul class="nav navbar-nav ">
-            <li class="active">
+            <li class="">
               <%= link_to'Inicio', root_path %>
             </li>
             <li><a href="#about">Sobre nosotros</a></li>
             <li><a href="#follow_us">Síguenos </a></li>
             <% if user_signed_in? %>
               <li>
-              <%= current_user.username %>
               <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %>
               </li>
             <% else %>
