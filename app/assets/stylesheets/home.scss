@@ -9,9 +9,6 @@
 
   &__container {
     background-color: #00d7ff;
-    padding-top: 10px;
-    height: 100vh;
-    text-align: center;
     color: #fff;
   }
 
@@ -24,20 +21,21 @@
 
   }
 
+  &__headline{
+    color: #fff !important;
+    font-size: 50px !important;
+  }
+
   &__deck{
     font-family: 'Droid Serif';
     font-style: italic;
     font-size: 22px;
   }
 
-  &__headline{
-    font-family: 'Lobster', cursive;
-    font-size: 50px;
-  }
-  &__start_btn, &__start_btn:hover, &__start_btn:visited {
-    background-color: #75e100 !important;
-    border-color: #75e100 !important;
-    color: #fff !important;
+  &__button,
+  &__button:hover,
+  &__button:visited {
+    border-radius: 5% !important;
   }
 
   &__video,

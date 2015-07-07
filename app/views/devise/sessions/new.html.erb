@@ -1,14 +1,14 @@
-<div class="container register__container">
-  <h2 class="register__title">Iniciar Sesión</h2>
+<div class="container devise__container">
+  <h2 class="devise__headline">Iniciar Sesión</h2>
 
-  <div class="register__form">
+  <div class="devise__form">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.email_field :email, autofocus: true, placeholder: "Correo Electrónico", class: "register__input"%>
+        <%= f.email_field :email, autofocus: true, placeholder: "Correo Electrónico", class: "devise__input"%>
       </div>
 
       <div class="field">
-        <%= f.password_field :password, autocomplete: "off", placeholder:"Contraseña" , class: "register__input"%>
+        <%= f.password_field :password, autocomplete: "off", placeholder:"Contraseña" , class: "devise__input"%>
       </div>
 
       <% if devise_mapping.rememberable? -%>
@@ -19,12 +19,12 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Entrar", class: "btn register__button" %>
+        <%= f.submit "Entrar", class: "btn devise__button" %>
       </div>
     <% end %>
   </div>
 
-  <div class="register__shared">
+  <div class="devise__shared">
     <%= render "devise/shared/links" %>
   </div>
 

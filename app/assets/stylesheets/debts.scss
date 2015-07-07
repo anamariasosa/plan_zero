@@ -2,29 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .debts {
-  &__container {
-    margin: 0 auto;
-    clear: both;
-    text-align: center;
+
+  &__headline {
+    margin-top: 0 !important;
   }
 
-  &__title{
-    font-family: 'Lobster';
-    color: #75e100;
-    font-size: 40px;
+  &__button {
+    padding-top: 10px !important;
   }
 
-  &__input{
-    border-radius: 50px;
-    border: 1px solid #b5b5b5 !important;
-    height: 50px;
-    margin-bottom: 5px;
+  &__fields th {
     text-align: center;
-    width: 190px;
-    font-size: 16px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #00ff00;
+    border-color: #13db13 !important;
+  }
 
-    &:focus {
-      outline-color: transparent !important;
+  &__details {
+    &:nth-child(2n+1) {
+      color: #00d7ff;
+    }
+
+    &:nth-child(2n) {
+      color: #00adee;
     }
   }
+
+  &__total {
+    border: 2px solid #00d7ff;
+    padding-top: 13px;
+    & p {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &__new {
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  &__destroy,
+  &__destroy:hover,
+  &__destroy:visited {
+    color: #FF0033 !important;
+    text-transform: none;
+  }
+
+  &__saved {
+    padding: 50% 0 !important;
+  }
+}
+.footable-row-detail{
+    &-value {
+     color: #00d7ff
+    }
+
+    &-name {
+      color: #00adee
+    }
 }

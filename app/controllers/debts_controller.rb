@@ -5,12 +5,12 @@ class DebtsController < ApplicationController
   # GET /debts.json
   def index
     @debts = current_user.debts.order(interest_rate: :desc)
+    @total = current_user.debts.all.sum :amount
   end
 
   # GET /debts/1
   # GET /debts/1.json
-  def show
-  end
+
 
   # GET /debts/new
   def new

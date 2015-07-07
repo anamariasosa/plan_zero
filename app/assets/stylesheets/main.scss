@@ -1,0 +1,48 @@
+.app,
+.welcome,
+.debts,
+.devise {
+
+  &__container{
+    padding-top: 10px;
+    height: auto !important;
+    text-align: center;
+  }
+
+  &__headline{
+    font-family: 'Lobster';
+    color: #00FF00;
+    font-size: 40px;
+  }
+
+  &__button,
+  &__button:hover,
+  &__button:visited
+  {
+    background-color: #00FF00;
+    border-color: #00FF00;
+    color: #fff;
+    border-radius: 50px;
+    height: 50px;
+    width: 111px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+}
+
+.debts,
+.devise {
+  &__input{
+    border-radius: 50px;
+    border: 1px solid #b5b5b5 !important;
+    height: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+    width: 190px;
+    font-size: 16px;
+
+    &:focus {
+      outline-color: transparent !important;
+    }
+  }
+}

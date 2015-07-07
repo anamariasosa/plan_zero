@@ -1,34 +1,43 @@
-
-<h1>Listing Debts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Debt name</th>
-      <th>Amount</th>
-      <th>Interest rate</th>
-      <th>Remaining fees</th>
-      <th>Frequency</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @debts.each do |debt| %>
-      <tr>
-        <td><%= debt.debt_name %></td>
-        <td><%= debt.amount %></td>
-        <td><%= debt.interest_rate %></td>
-        <td><%= debt.remaining_fees %></td>
-        <td><%= debt.frequency %></td>
-        <td><%= link_to 'Show', debt %></td>
-        <td><%= link_to 'Edit', edit_debt_path(debt) %></td>
-        <td><%= link_to 'Destroy', debt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div class="container debts__container">
+  <table class="debts__table table table-hover table-bordered"  data-filter="#filter" data-page-size="5" data-page-previous-text="prev" data-page-next-text="next">
+    <thead>
+      <tr class="debts__fields">
+        <th data-sort-initial="descending" data-class="expand">Nombre</th>
+        <th data-type="numeric">Valor($)</th>
+        <th data-type="numeric" data-hide="phone,tablet">Tasa de interés</th>
+        <th data-type="numeric" data-hide="phone,tablet">Cuotas Restantes</th>
+        <th data-type="numeric" data-hide="phone,tablet">Frecuencia</th>
+        <th data-hide="phone,tablet" colspan="1" ></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @debts.each do |debt| %>
+        <tr class="debts__details">
+          <td><%= debt.debt_name %></td>
+          <td><%= number_to_currency(debt.amount) %></td>
+          <td><%= debt.interest_rate %></td>
+          <td><%= debt.remaining_fees %></td>
+          <td><%= debt.frequency %></td>
+          <td><%= link_to 'Eliminar Deuda', debt, method: :delete, class: "debts__destroy",data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="debts__total">
+    <p>Deuda total: $<%= number_to_currency(@total)  %></p>
+  </div>
+  <div class="debts__new">
+    <%= link_to 'Añadir más', new_debt_path, class: "btn debts__button" %>
+  </div>
+</div>
+<script type="text/javascript">
+  $('table').footable({
+      breakpoints: {
+          tiny: 100,
+          medium: 555,
+          big: 2048
+      }
+  });
+</script>
 
-<%= link_to 'New Debt', new_debt_path %>

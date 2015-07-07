@@ -14,11 +14,16 @@
  *= require_self
  */
 
- @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
- @import url(http://fonts.googleapis.com/css?family=Lato);
- body{
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body{
   font-family: 'Lato', serif;
- }
+}
+
+input, textarea, select, input:hover, textarea:hover, select:hover {
+  outline: none !important;
+}
 
 .logo img {
   height: 60px;
@@ -32,12 +37,17 @@
 .main-header__icon {
   background-color: #fff !important;
 }
-.main-header__navbar li a {
 
+.main-header__navbar li a {
   color: #fff !important;
 }
-.main-header__navbar li:hover, .active, .active{
-  background-color: #75e100 !important;
+
+.main-header__navbar li:hover, .active a{
+  background-color: #00FF00 !important;
+}
+
+.container .main-header__navbar {
+  margin-top: 2px
 }
 
 .main-header__navbar, .main-header__button, .main-header__button:hover {
@@ -46,6 +56,6 @@
   border-color: #00d7ff !important;
 }
 
-input, textarea, select, input:hover, textarea:hover, select:hover {
-  outline: none !important;
+.alert {
+  margin-bottom: 0 !important;
 }

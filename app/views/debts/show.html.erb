@@ -1,29 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="container debts__container debts__saved">
+  <p>
+    Tu deuda <%= @debt.debt_name %> ha sido guardada con éxito
+  </p>
 
-<p>
-  <strong>Debt name:</strong>
-  <%= @debt.debt_name %>
-</p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @debt.amount %>
-</p>
-
-<p>
-  <strong>Interest rate:</strong>
-  <%= @debt.interest_rate %>
-</p>
-
-<p>
-  <strong>Remaining fees:</strong>
-  <%= @debt.remaining_fees %>
-</p>
-
-<p>
-  <strong>Frequency:</strong>
-  <%= @debt.frequency %>
-</p>
-
-<%= link_to 'Edit', edit_debt_path(@debt) %> |
-<%= link_to 'Back', debts_path %>
+  <%= link_to 'Editar', edit_debt_path(@debt), class: "btn debts__button"%> <br>
+  <%= link_to 'Ver lista de deudas', debts_path, class: "btn debts__button" %>
+</div>
