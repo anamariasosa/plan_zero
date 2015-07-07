@@ -27,23 +27,30 @@
             </li>
             <li><a href="#about">Sobre nosotros</a></li>
             <li><a href="#about">Síguenos </a></li>
+            <% if user_signed_in? %>
+              <li>
+              <%= current_user.username %>
+              <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %>
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Iniciar Sesión', new_user_session_path)  %>
+              </li>
+            <% end %>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
   </header>
-  <%= yield  %>
-  <footer>
-    <% if user_signed_in? %>
-      <li>
-      <%= current_user.username %>
-      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      </li>
-    <% else %>
-      <li>
-      <%= link_to('Login', new_user_session_path)  %>
-      </li>
+  <div class="notice">
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-info" %>
     <% end %>
+  </div>
+  <%= yield  %>
+
+  <footer>
+
   </footer>
 </body>
 </html>

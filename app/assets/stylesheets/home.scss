@@ -6,6 +6,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 
 .app {
+
   &__container {
     background-color: #00d7ff;
     padding-top: 10px;
@@ -39,11 +40,14 @@
     color: #00d7ff;
   }
 
-  &__video, &__video:focus, &__video:hover, &__video:visited {
-    color : #fff !important;
+  &__video,
+  &__video:focus,
+  &__video:hover,
+  &__video:visited {
     background-color: transparent;
-    text-transform: none !important;
+    color: #fff !important;
     font-size: 16px;
+    text-transform: none !important;
   }
 }
 

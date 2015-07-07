@@ -13,9 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
  @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
+ @import url(http://fonts.googleapis.com/css?family=Lato);
  body{
-  font-family: 'Droid Serif', serif;
+  font-family: 'Lato', serif;
  }
 
 .logo img {
@@ -35,4 +37,8 @@
   background-color: #00d7ff !important;
   margin-bottom: 0;
   border-color: #00d7ff !important;
+}
+
+input, textarea, select, input:hover, textarea:hover, select:hover {
+  outline: none !important;
 }
