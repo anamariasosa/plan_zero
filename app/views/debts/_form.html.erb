@@ -15,7 +15,7 @@
     <%= f.text_field :debt_name, placeholder: "Nombre de la deuda", class: "debts__input"%>
   </div>
   <div class="field">
-    <%= f.number_field :amount, placeholder: "Pago mínimo", class: "debts__input"%>
+    <%= f.number_field :amount, placeholder: "Pago mínimo", class: "debts__input", pattern: "\d*"%>
   </div>
   <div class="row">
     <div class="field .col-xs-6 .col-md-4">
