@@ -32,6 +32,13 @@
 .main-header__icon {
   background-color: #fff !important;
 }
+.main-header__navbar li a {
+
+  color: #fff !important;
+}
+.main-header__navbar li:hover, .active, .active{
+  background-color: #75e100 !important;
+}
 
 .main-header__navbar, .main-header__button, .main-header__button:hover {
   background-color: #00d7ff !important;
