@@ -24,17 +24,21 @@
             <li>
               <%= link_to "Crear Deuda", new_debt_path %>
             </li>
-            <li>
-            <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %>
-            </li>
           <% else %>
-            <li><a href="#about">Sobre nosotros</a></li>
-            <li><a href="#follow_us">Síguenos </a></li>
-            <li>
-            <%= link_to('Iniciar Sesión', new_user_session_path)  %>
-            </li>
+            <li><a href="#about">Beneficios</a></li>
           <% end %>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if !user_signed_in? %>
+          <li>
+            <%= link_to('Iniciar Sesión', new_user_session_path)  %>
+          </li>
+          <% else %>
+          <li>
+            <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %>
+          </li>
+        </ul>
+          <% end %>
       </div><!--/.nav-collapse -->
     </div>
   </nav>

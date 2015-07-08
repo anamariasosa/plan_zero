@@ -10,6 +10,54 @@
   &__container {
     background-color: #00d7ff;
     color: #fff;
+    height: 100vh;
+  }
+
+  &__follow{
+
+    &-container {
+      background-color: #f2f2f2;
+      height: 30vh;
+    }
+
+    &-link {
+      display: block;
+      text-align: center !important;
+    }
+
+    &-link2 {
+      display: block;
+      text-align: center !important;
+      font-size: 19px;
+    }
+
+    &-twitter {
+      font-size: 50px !important;
+      color: #00d7ff;
+    }
+  }
+
+  &__benefits {
+    &-container {
+        background-color: #ffffff;
+        height: 70vh;
+    }
+
+    &-items {
+      margin-top: 20px;
+      text-align: center;
+
+      & p {
+        font-size: 16px;
+        margin-bottom: 20px
+      }
+    }
+
+    &-icon {
+      color: #00adee;
+      margin-right: 16px;
+      font-size: 50px !important;
+    }
   }
 
   &__content {
@@ -24,6 +72,11 @@
   &__headline{
     color: #fff !important;
     font-size: 50px !important;
+  }
+
+  &__secondary-headline{
+    color: #444 !important;
+    font-size: 36px !important;
   }
 
   &__deck{

@@ -1,18 +1,40 @@
 <div class="app__container">
-  <div class="app__content">
-    <h1 class="app__headline">Plan Zero</h1>
-    <h4 class="app__deck">"Limpiaremos tu nombre financiero"</h4>
-    <p>
-       <%= link_to'Empezar', new_user_registration_path, class: "btn btn-primary btn-lg app__button"  %>
-    </p>
-    <a href="" class="app__video">
-      <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-      Ver video
-    </a>
+  <div class="app__home-container">
+    <div class="app__content">
+      <h1 class="app__headline">Plan Zero</h1>
+      <h4 class="app__deck">"Limpiaremos tu nombre financiero"</h4>
+      <p>
+         <%= link_to'Empezar', new_user_registration_path, class: "btn btn-primary btn-lg app__button"  %>
+      </p>
+      <a href="" class="app__video">
+        <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+        Ver video
+      </a>
+    </div>
+    <div class="app__image">
+      <figure>
+        <img src="/assets/wallet.png" alt="">
+      </figure>
+    </div>
   </div>
-  <div class="app__image">
-    <figure>
-      <img src="/assets/wallet.png" alt="">
-    </figure>
+</div>
+<div class="app__benefits-container" id="about">
+  <div class="container">
+    <h3 class="app__headline app__secondary-headline">Beneficios</h3>
+    <div class="app__benefits-items">
+      <i class="app__benefits-icon fa fa-money"></i>
+      <p>Mantener la vida crediticia vigente</p>
+      <i class="app__benefits-icon fa fa-credit-card"></i>
+      <p>Valorar las mejores oportunidades de crédito</p>
+      <i class="app__benefits-icon fa fa-tachometer"></i>
+      <p>Tener un mayor control y conocimiento de tu capacidad de endeudamiento</p>
+    </div>
+</div>
+</div>
+<div class="app__follow-container">
+  <div class="container">
+    <h4 class="app__headline app__secondary-headline">Sígamos en contacto</h4>
+    <a href="https://twitter.com/planzeroapp" class="app__follow-link" target="_blank"><i class="fa fa-twitter app__follow-twitter"></i></a>
+    <a href="https://twitter.com/planzeroapp" class="app__follow-link2"target="_blank">@planzeroapp</a>
   </div>
 </div>

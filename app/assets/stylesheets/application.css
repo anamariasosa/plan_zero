@@ -16,7 +16,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic);
 @import url(http://fonts.googleapis.com/css?family=Lato);
-
 body{
   font-family: 'Lato', serif;
 }
@@ -47,13 +46,18 @@ input, textarea, select, input:hover, textarea:hover, select:hover {
 }
 
 .container .main-header__navbar {
-  margin-top: 2px
+  margin-top: 10px
 }
 
 .main-header__navbar, .main-header__button, .main-header__button:hover {
   background-color: #00d7ff !important;
   margin-bottom: 0;
   border-color: #00d7ff !important;
+}
+
+.main-header__navbar ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .alert {
