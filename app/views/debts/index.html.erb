@@ -47,7 +47,15 @@
   </div>
 
 </div>
-<script>
+<script type="text/javascript">
+
+  $('table').footable({
+    breakpoints: {
+      tiny: 100,
+      medium: 555,
+      big: 2048
+    }
+  });
   $('#know').on('submit', function(event) {
     event.preventDefault();
     var $ganas = $("[name='ganas']").val();
@@ -69,13 +77,6 @@
 
     $( ".debts__know-form" ).slideUp( "slow", function() {
     });
-  });
-  $('table').footable({
-      breakpoints: {
-          tiny: 100,
-          medium: 555,
-          big: 2048
-      }
   });
   $( ".debts__know-button" ).click(function(e) {
     e.preventDefault();
