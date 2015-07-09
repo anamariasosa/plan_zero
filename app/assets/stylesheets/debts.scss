@@ -35,8 +35,7 @@
   }
 
   &__new {
-    margin: 20px 0;
-    text-align: left;
+    margin-top: 20px;
   }
 
   &__destroy,
@@ -49,6 +48,35 @@
   &__saved {
     padding-top: 40% !important;
   }
+
+  &__know {
+
+    margin-bottom: 10px;
+
+    &-button,
+    &-button:hover,
+    &-button:active
+    {
+      color: #fff !important;
+    }
+
+    &-form {
+      margin: 20px 0;
+    }
+
+    &-send-btn {
+      margin-top: 0 !important;
+    }
+  }
+
+  &__plan-button {
+    &:hover,
+    &:active {
+      color: #fff !important;
+    }
+
+  }
+
 }
 .footable-row-detail{
     &-value {

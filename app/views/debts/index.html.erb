@@ -30,8 +30,46 @@
   <div class="debts__new">
     <%= link_to 'Añadir más', new_debt_path, class: "btn btn-lg debts__button" %>
   </div>
+  <div class="debts__more">
+    <input type="submit" value="Quiero un Plan" class="btn btn-lg debts__button debts__plan-button">
+  </div>
+  <div class="debts__know">
+    <input type="submit" value="¿Cuánto me puedo endeudar?" class="btn btn-lg debts__button debts__know-button">
+    <div class="debts__know-form">
+      <p>Si no sabes por qué el sueldo no te rinde, probablemente es porque no has hecho una cuenta muy importante que te permite saber hasta qué punto gastar.</p>
+      <p>Ingresa los campos pedidos recuerda que son valores mensuales</p>
+      <form action="" id="know">
+        <input type="number" placeholder="¿Cuánto ganas?"  class="debts__input" name="ganas"><br>
+        <input type="number" placeholder="¿Cuánto gastas?" class="debts__input"  name="gastas"><br>
+        <input type="submit" value="Calcular" class="btn btn-lg debts__button debts__know-send-btn">
+      </form>
+    </div>
+  </div>
+
 </div>
-<script type="text/javascript">
+<script>
+  $('#know').on('submit', function(event) {
+    event.preventDefault();
+    var $ganas = $("[name='ganas']").val();
+    var $gastas = $("[name='gastas']").val();
+    var cap = ($ganas - $gastas) * 0.35;
+    if (cap >= 0) {
+     swal({
+       title: "Capacidad de enduedamiento",
+       text: Math.floor(cap),
+       type: "success"
+     });
+    }else{
+      swal({
+        title: "Capacidad de enduedamiento",
+        text: "Cuidado! estás debiendo más de lo que tienes",
+        type: "error"
+      });
+    }
+
+    $( ".debts__know-form" ).slideUp( "slow", function() {
+    });
+  });
   $('table').footable({
       breakpoints: {
           tiny: 100,
@@ -39,5 +77,25 @@
           big: 2048
       }
   });
-</script>
+  $( ".debts__know-button" ).click(function(e) {
+    e.preventDefault();
+    $( ".debts__know-form" ).slideDown( "slow", function() {
+    });
+  });
 
+  $(".debts__plan-button").click(function(event) {
+    event.preventDefault();
+    swal({
+      title: "En construcción",
+      text: "Estamos mejorando para que tengas una excelente experiencia",
+      imageUrl: '<%= asset_path 'construction.png' %>'
+    });
+  });
+
+  $(document).ready(function() {
+
+    $( ".debts__know-form" ).slideUp( "fast", function() {
+    });
+  });
+
+</script>
